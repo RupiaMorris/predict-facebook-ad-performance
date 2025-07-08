@@ -1,9 +1,11 @@
 import streamlit as st
 import joblib
 import numpy as np
+import os
 
 # 🔧 Load the trained model
-model = joblib.load(r'C:\Users\Hp\Desktop\work\predict-facebook-ad-performance\models\random_forest_ctr_model.pkl')
+model_path = os.path.join("..", "models", "random_forest_ctr_model.pkl")
+model = joblib.load(model_path)
 
 # 🧾 Page setup
 st.set_page_config(page_title="CTR Predictor", layout="centered")
