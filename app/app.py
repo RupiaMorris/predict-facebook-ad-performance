@@ -5,6 +5,8 @@ import os
 
 # 🔧 Load the trained model
 model_path = os.path.join("..", "models", "random_forest_ctr_model.pkl")
+print("Looking for model at:", os.path.abspath(model_path))
+print("File exists:", os.path.isfile(model_path))
 model = joblib.load(model_path)
 
 # 🧾 Page setup
