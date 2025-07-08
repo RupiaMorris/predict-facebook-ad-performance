@@ -3,10 +3,10 @@ import joblib
 import numpy as np
 import os
 
-# 🔧 Load the trained model
-model_path = os.path.join("..", "models", "random_forest_ctr_model.pkl")
-print("Looking for model at:", os.path.abspath(model_path))
-print("File exists:", os.path.isfile(model_path))
+#  Load the trained model
+current_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_dir, "..", "models", "random_forest_ctr_model.pkl")
+model_path = os.path.normpath(model_path)
 model = joblib.load(model_path)
 
 # 🧾 Page setup
